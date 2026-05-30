@@ -1,0 +1,134 @@
+/* App-specific styles */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation classes for scroll animations */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.anim-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Left slide animation */
+.scroll-animate-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate-left.anim-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Right slide animation */
+.scroll-animate-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate-right.anim-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale animation */
+.scroll-animate-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-animate-scale.anim-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Hero section specific */
+#hero {
+  position: relative;
+}
+
+/* Button hover effects */
+button, .btn {
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Image hover zoom */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Red accent text */
+.text-red-accent {
+  color: #e30614;
+}
+
+/* Dark background */
+.bg-dark-bg {
+  background-color: #0a0a0a;
+}
+
+.bg-dark-card {
+  background-color: #1a1a1a;
+}
+
+.border-dark-border {
+  border-color: #2a2a2a;
+}
+
+/* Form focus states */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #e30614 !important;
+  box-shadow: 0 0 0 2px rgba(227, 6, 20, 0.2);
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  nav, footer, .no-print {
+    display: none !important;
+  }
+}
