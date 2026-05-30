@@ -446,7 +446,7 @@ function OrderSongSection() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', description: '' })
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault()
     setIsSubmitted(true)
     setTimeout(() => setIsSubmitted(false), 3000)
